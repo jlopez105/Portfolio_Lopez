@@ -120,7 +120,8 @@ img, video { max-width: 100%; display: block; }
 .placeholder-inner small { font-size: .78rem; color: var(--text-muted); font-family: ui-monospace, Menlo, Consolas, monospace; }
 
 .placeholder-frame.is-filled { border: none; background: none; }
-.placeholder-frame.is-filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.placeholder-frame.is-filled img,
+.placeholder-frame.is-filled video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .avatar-frame { aspect-ratio: 1 / 1; border-radius: 999px; max-width: 320px; margin: 0 auto; }
 .avatar-frame .placeholder-inner { padding: 12px; }
