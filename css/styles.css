@@ -90,6 +90,8 @@ img, video { max-width: 100%; display: block; }
 .hero-lede { font-size: 1.08rem; max-width: 54ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 24px; }
 .hero-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: .92rem; color: var(--text-muted); font-weight: 600; }
+.hero-meta li { display: flex; align-items: center; gap: 6px; }
+.hero-meta svg { color: var(--accent-2); flex-shrink: 0; }
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px;
@@ -132,7 +134,7 @@ img, video { max-width: 100%; display: block; }
 .section-sub { max-width: 60ch; }
 
 /* About */
-.about-grid { display: grid; grid-template-columns: 1.2fr .9fr; gap: 36px; margin-top: 28px; align-items: start; }
+.about-grid { display: grid; grid-template-columns: 1.2fr .9fr; gap: 36px; margin-top: 64px; align-items: start; }
 .about-text { font-size: 1.02rem; }
 .about-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -146,7 +148,7 @@ img, video { max-width: 100%; display: block; }
 .fact-list li::before { content: "•"; position: absolute; left: 4px; color: var(--accent-2); font-weight: 800; }
 
 .tag {
-  display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  display: inline-flex; align-items: center; gap: 4px; background: var(--accent-soft); color: var(--accent); font-weight: 700;
   font-size: .74rem; padding: 5px 10px; border-radius: 999px; white-space: nowrap;
 }
 
@@ -186,7 +188,7 @@ img, video { max-width: 100%; display: block; }
 .project-body h3 { font-size: 1.12rem; margin: 4px 0 0; }
 .project-body p { font-size: .93rem; margin-bottom: 4px; }
 .project-links { margin-top: auto; padding-top: 8px; }
-.link-placeholder { font-size: .82rem; color: var(--text-muted); font-style: italic; }
+.link-placeholder { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--text-muted); font-style: italic; }
 
 /* Skills */
 .skills-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
@@ -212,7 +214,7 @@ img, video { max-width: 100%; display: block; }
   font-weight: 700; font-size: .98rem; transition: background .15s;
 }
 .contact-row:hover { background: var(--accent-soft); color: var(--accent); }
-.contact-icon { font-size: 1.2rem; }
+.contact-icon { display: flex; color: var(--accent); flex-shrink: 0; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border); padding: 28px 0; }

@@ -30,8 +30,8 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero">
+    <!-- INTRO / ABOUT -->
+    <section class="hero" id="about">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Mechanical Engineering · University of Central Florida</p>
@@ -44,11 +44,14 @@
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-            <a href="assets/docs/Jeremy_Lopez_Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+            <a href="assets/docs/Jeremy_Lopez_Resume.pdf" download="Jeremy_Lopez_Resume.pdf" class="btn btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Download Resume
+            </a>
           </div>
           <ul class="hero-meta">
-            <li>📍 Orlando, FL</li>
-            <li>🎓 B.S. Mechanical Engineering, Expected 2028</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-7.58 7-12a7 7 0 1 0-14 0c0 4.42 7 12 7 12Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg> Orlando, FL</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 10.5V16c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 8v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> B.S. Mechanical Engineering, Expected 2028</li>
           </ul>
         </div>
 
@@ -62,41 +65,34 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <p class="section-kicker">About</p>
-        <h2 class="section-title">A hands-on engineer who likes to build things that work.</h2>
-        <div class="about-grid">
-          <p class="about-text">
-            I'm a Mechanical Engineering student at the University of Central Florida (Class of 2028,
-            GPA 3.3), currently working as a Research Assistant in the Interfacial Heat Transfer
-            Laboratory under Dr. Shawn Putnam, where I design microchannel geometry for pulsating
-            heat pipes used in high-heat-flux power electronics cooling. Outside the lab, I lead the
-            drive team for UCF's ASME Student Design Competition entry, serve as a Resident Assistant
-            in UCF Housing &amp; Residence Life, and build independent electromechanical projects —
-            from an autonomous pond racing boat to an Arduino-based auto-irrigation system.
-          </p>
-          <div class="about-card">
-            <h3>Education</h3>
-            <div class="edu-row">
-              <div>
-                <strong>University of Central Florida</strong>
-                <p>B.S. Mechanical Engineering — GPA 3.3</p>
-              </div>
-              <span class="tag">Expected 2028</span>
+      <div class="container about-grid">
+        <p class="about-text">
+          I'm a Mechanical Engineering student at the University of Central Florida (Class of 2028,
+          GPA 3.3), currently working as a Research Assistant in the Interfacial Heat Transfer
+          Laboratory under Dr. Shawn Putnam, where I design microchannel geometry for pulsating
+          heat pipes used in high-heat-flux power electronics cooling. Outside the lab, I lead the
+          drive team for UCF's ASME Student Design Competition entry, serve as a Resident Assistant
+          in UCF Housing &amp; Residence Life, and build independent electromechanical projects —
+          from an autonomous pond racing boat to an Arduino-based auto-irrigation system.
+        </p>
+        <div class="about-card">
+          <h3>Education</h3>
+          <div class="edu-row">
+            <div>
+              <strong>University of Central Florida</strong>
+              <p>B.S. Mechanical Engineering — GPA 3.3</p>
             </div>
-            <hr />
-            <h3>Quick Facts</h3>
-            <ul class="fact-list">
-              <li>2024 &amp; 2025 AP Scholar with Distinction</li>
-              <li>Founding Secretary, MSD High School Physics Club</li>
-              <li>Pursuing CSWA / CSWP SolidWorks certifications</li>
-              <li>Active member, UCF Brazilian Jiu-Jitsu Club</li>
-            </ul>
+            <span class="tag">Expected 2028</span>
           </div>
+          <hr />
+          <h3>Quick Facts</h3>
+          <ul class="fact-list">
+            <li>2024 &amp; 2025 AP Scholar with Distinction</li>
+            <li>Founding Secretary, MSD High School Physics Club</li>
+            <li>Pursuing CSWA / CSWP SolidWorks certifications</li>
+            <li>Active member, UCF Brazilian Jiu-Jitsu Club</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -178,7 +174,7 @@
               <h3>Pulsating Heat Pipe for Power Electronics Cooling</h3>
               <p>Designing and validating microchannel geometry for a flat-plate PHP targeting ≥100 W/cm² heat flux, grounded in peer-reviewed literature on working fluid behavior and condenser configuration.</p>
               <div class="project-links">
-                <span class="link-placeholder">🔗 Write-up link placeholder</span>
+                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Write-up link placeholder</span>
               </div>
             </div>
           </article>
@@ -197,7 +193,7 @@
               <h3>Great Navel Orange Race — Autonomous Pond Racing Boat</h3>
               <p>Designed and fabricated an autonomous pond racing boat from laser-cut water-resistant wood with custom CAD-designed DXF ribs and hull. Integrated an Arduino Nano control system with a brushless motor and ESC, plus a 3D-printed rudder assembly.</p>
               <div class="project-links">
-                <span class="link-placeholder">🔗 Demo video link placeholder</span>
+                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Demo video link placeholder</span>
               </div>
             </div>
           </article>
@@ -216,7 +212,7 @@
               <h3>Arduino-Based Auto-Irrigation System</h3>
               <p>Built a low-power automated plant-watering system using an Arduino Nano, soil moisture sensor, and relay-controlled pump. Engineered a single-supply 5V power architecture with surge suppression and a custom 3D-printed enclosure housing the reservoir and electronics.</p>
               <div class="project-links">
-                <span class="link-placeholder">🔗 Build log link placeholder</span>
+                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Build log link placeholder</span>
               </div>
             </div>
           </article>
@@ -235,7 +231,7 @@
               <h3>ASME Waste-Sorting Robot</h3>
               <p>Developed a full SolidWorks CAD model for a competition-compliant waste-sorting robot with integrated color sensors, and led integration of motors, controllers, and power systems with the mechanical design as Drive Team Lead.</p>
               <div class="project-links">
-                <span class="link-placeholder">🔗 Competition recap link placeholder</span>
+                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Competition recap link placeholder</span>
               </div>
             </div>
           </article>
@@ -250,11 +246,11 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-tags"><span class="tag">Team Project</span><span class="tag">Servo Control</span><span class="tag">🏆 1st Place</span></div>
+              <div class="project-tags"><span class="tag">Team Project</span><span class="tag">Servo Control</span><span class="tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/><path d="m9 12.5-1.5 6L12 16l4.5 2.5-1.5-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> 1st Place</span></div>
               <h3>Catapult Project</h3>
               <p>Collaborated with a 4-member team to design and test a latch-triggered elastic catapult robot with servo and Arduino electromechanical integration, iteratively tuning for launch accuracy and consistency — earning 1st place.</p>
               <div class="project-links">
-                <span class="link-placeholder">🔗 Launch test video link placeholder</span>
+                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Launch test video link placeholder</span>
               </div>
             </div>
           </article>
@@ -333,16 +329,20 @@
         </div>
         <div class="contact-card">
           <a class="contact-row" href="mailto:JRLopez8009@gmail.com">
-            <span class="contact-icon">✉️</span>
+            <span class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <span>JRLopez8009@gmail.com</span>
           </a>
           <a class="contact-row" href="tel:+17868309988">
-            <span class="contact-icon">📱</span>
+            <span class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
             <span>(786) 830-9988</span>
           </a>
           <a class="contact-row" href="https://www.linkedin.com/in/jeremylopez1/" target="_blank" rel="noopener noreferrer">
-            <span class="contact-icon">🔗</span>
+            <span class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
             <span>linkedin.com/in/jeremylopez1</span>
+          </a>
+          <a class="contact-row" href="assets/docs/Jeremy_Lopez_Resume.pdf" download="Jeremy_Lopez_Resume.pdf">
+            <span class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <span>Download Resume (PDF)</span>
           </a>
         </div>
       </div>
