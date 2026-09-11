@@ -148,13 +148,14 @@
       <div class="container">
         <p class="section-kicker">Projects</p>
         <h2 class="section-title">Things I've designed, built, and tested.</h2>
-        <p class="section-sub">Photos and videos below are placeholders — swap the files noted under each card to bring these to life.</p>
+        <p class="section-sub">Click a project's photo to see more pictures.</p>
 
         <div class="project-grid">
           <!-- Project 1 -->
-          <article class="project-card">
+          <article class="project-card is-clickable" data-gallery='["assets/images/php-research.jpg"]' data-caption="Pulsating Heat Pipe for Power Electronics Cooling" tabindex="0" role="button" aria-label="View photos for Pulsating Heat Pipe for Power Electronics Cooling">
             <div class="placeholder-frame media-16x10 is-filled">
               <img src="assets/images/php-research.jpg" alt="Optics and laser diagnostics bench in the Interfacial Heat Transfer Laboratory" loading="lazy" />
+              <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Research</span><span class="tag">SolidWorks</span><span class="tag">Thermal Systems</span></div>
@@ -167,9 +168,10 @@
           </article>
 
           <!-- Project 2 -->
-          <article class="project-card">
+          <article class="project-card is-clickable" data-gallery='["assets/images/orange-race.jpg","assets/images/orange-race-2.jpg"]' data-caption="Great Navel Orange Race — Autonomous Pond Racing Boat" tabindex="0" role="button" aria-label="View photos for Great Navel Orange Race">
             <div class="placeholder-frame media-16x10 is-filled">
               <img src="assets/images/orange-race.jpg" alt="Autonomous pond racing boat with an orange payload, poolside test run" loading="lazy" />
+              <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Arduino</span><span class="tag">CAD/CAM</span><span class="tag">3D Printing</span></div>
@@ -182,9 +184,10 @@
           </article>
 
           <!-- Project 3 -->
-          <article class="project-card">
+          <article class="project-card is-clickable" data-gallery='["assets/images/irrigation-system.jpg"]' data-caption="Arduino-Based Auto-Irrigation System" tabindex="0" role="button" aria-label="View photos for Arduino-Based Auto-Irrigation System">
             <div class="placeholder-frame media-16x10 is-filled">
               <img src="assets/images/irrigation-system.jpg" alt="Custom 3D-printed auto-irrigation planter with reservoir and electronics housing" loading="lazy" />
+              <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Arduino</span><span class="tag">Electronics</span><span class="tag">3D Printing</span></div>
@@ -197,9 +200,10 @@
           </article>
 
           <!-- Project 4 -->
-          <article class="project-card">
+          <article class="project-card is-clickable" data-gallery='["assets/images/waste-sorting-robot.jpg","assets/images/waste-sorting-robot-2.jpg"]' data-caption="ASME Waste-Sorting Robot" tabindex="0" role="button" aria-label="View photos for ASME Waste-Sorting Robot">
             <div class="placeholder-frame media-16x10 is-filled">
               <img src="assets/images/waste-sorting-robot.jpg" alt="ASME Student Design Competition waste-sorting robot with articulated claw arm" loading="lazy" />
+              <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">SolidWorks</span><span class="tag">Robotics</span><span class="tag">ASME</span></div>
@@ -323,6 +327,23 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
