@@ -37,36 +37,78 @@ const observer = new IntersectionObserver(
 
 revealTargets.forEach((el) => observer.observe(el));
 
-// Project photo lightbox
+// Nudge card video previews to paint a frame instead of staying blank
+document.querySelectorAll(".card-video-preview").forEach((video) => {
+  video.addEventListener("loadedmetadata", () => {
+    try {
+      video.currentTime = 0.1;
+    } catch (e) {
+      /* ignore */
+    }
+  });
+});
+
+// Project detail lightbox
 const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
+const lightboxMediaInner = document.getElementById("lightboxMediaInner");
 const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxTags = document.getElementById("lightboxTags");
+const lightboxDetail = document.getElementById("lightboxDetail");
 const lightboxCounter = document.getElementById("lightboxCounter");
 const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 const lightboxClose = document.getElementById("lightboxClose");
 
-let galleryImages = [];
+let galleryItems = [];
 let galleryIndex = 0;
 let lastFocusedEl = null;
 
-function renderLightbox() {
-  const src = galleryImages[galleryIndex];
-  lightboxImg.src = src;
-  lightboxImg.alt = lightboxCaption.textContent || "";
-  const multi = galleryImages.length > 1;
+function renderLightboxMedia() {
+  const item = galleryItems[galleryIndex];
+  lightboxMediaInner.innerHTML = "";
+  if (!item) return;
+
+  let el;
+  if (item.type === "video") {
+    el = document.createElement("video");
+    el.src = item.src;
+    el.controls = true;
+    el.playsInline = true;
+    el.autoplay = true;
+  } else {
+    el = document.createElement("img");
+    el.src = item.src;
+    el.alt = lightboxCaption.textContent || "";
+  }
+  lightboxMediaInner.appendChild(el);
+
+  const multi = galleryItems.length > 1;
   lightboxPrev.hidden = !multi;
   lightboxNext.hidden = !multi;
-  lightboxCounter.textContent = multi ? `${galleryIndex + 1} / ${galleryImages.length}` : "";
+  lightboxCounter.textContent = multi ? `${galleryIndex + 1} / ${galleryItems.length}` : "";
 }
 
-function openLightbox(images, caption, triggerEl) {
-  if (!images.length) return;
-  galleryImages = images;
+function openLightbox(card, triggerEl) {
+  let items = [];
+  try {
+    items = JSON.parse(card.dataset.gallery || "[]");
+  } catch (e) {
+    items = [];
+  }
+  if (!items.length) return;
+
+  galleryItems = items;
   galleryIndex = 0;
-  lightboxCaption.textContent = caption || "";
+  lightboxCaption.textContent = card.dataset.caption || "";
+
+  const tagsSource = card.querySelector(".project-tags");
+  lightboxTags.innerHTML = tagsSource ? tagsSource.innerHTML : "";
+
+  const detailSource = card.querySelector(".full-description");
+  lightboxDetail.innerHTML = detailSource ? detailSource.innerHTML : "";
+
   lastFocusedEl = triggerEl || document.activeElement;
-  renderLightbox();
+  renderLightboxMedia();
   lightbox.hidden = false;
   document.body.style.overflow = "hidden";
   lightboxClose.focus();
@@ -75,26 +117,18 @@ function openLightbox(images, caption, triggerEl) {
 function closeLightbox() {
   lightbox.hidden = true;
   document.body.style.overflow = "";
-  lightboxImg.src = "";
+  lightboxMediaInner.innerHTML = "";
   if (lastFocusedEl) lastFocusedEl.focus();
 }
 
 function showNext(delta) {
-  if (!galleryImages.length) return;
-  galleryIndex = (galleryIndex + delta + galleryImages.length) % galleryImages.length;
-  renderLightbox();
+  if (!galleryItems.length) return;
+  galleryIndex = (galleryIndex + delta + galleryItems.length) % galleryItems.length;
+  renderLightboxMedia();
 }
 
 document.querySelectorAll(".project-card.is-clickable").forEach((card) => {
-  const openFromCard = () => {
-    let images = [];
-    try {
-      images = JSON.parse(card.dataset.gallery || "[]");
-    } catch (e) {
-      images = [];
-    }
-    openLightbox(images, card.dataset.caption, card);
-  };
+  const openFromCard = () => openLightbox(card, card);
 
   card.addEventListener("click", (e) => {
     if (e.target.closest("a")) return;

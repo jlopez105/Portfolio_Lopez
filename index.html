@@ -148,83 +148,96 @@
       <div class="container">
         <p class="section-kicker">Projects</p>
         <h2 class="section-title">Things I've designed, built, and tested.</h2>
-        <p class="section-sub">Click a project's photo to see more pictures.</p>
+        <p class="section-sub">Click a project to see more photos and the full story.</p>
 
         <div class="project-grid">
           <!-- Project 1 -->
-          <article class="project-card is-clickable" data-gallery='["assets/images/php-research.jpg"]' data-caption="Pulsating Heat Pipe for Power Electronics Cooling" tabindex="0" role="button" aria-label="View photos for Pulsating Heat Pipe for Power Electronics Cooling">
-            <div class="placeholder-frame media-16x10 is-filled">
+          <article class="project-card is-clickable" data-gallery='[{"type":"image","src":"assets/images/php-research.jpg"}]' data-caption="Pulsating Heat Pipe for Power Electronics Cooling" tabindex="0" role="button" aria-label="View details for Pulsating Heat Pipe for Power Electronics Cooling">
+            <div class="placeholder-frame media-card is-filled">
               <img src="assets/images/php-research.jpg" alt="Optics and laser diagnostics bench in the Interfacial Heat Transfer Laboratory" loading="lazy" />
               <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Research</span><span class="tag">SolidWorks</span><span class="tag">Thermal Systems</span></div>
               <h3>Pulsating Heat Pipe for Power Electronics Cooling</h3>
-              <p>Designing and validating microchannel geometry for a flat-plate PHP targeting ≥100 W/cm² heat flux, grounded in peer-reviewed literature on working fluid behavior and condenser configuration.</p>
-              <div class="project-links">
-                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Write-up link placeholder</span>
-              </div>
+              <p class="project-blurb">Designing microchannel geometry for a flat-plate pulsating heat pipe targeting ≥100 W/cm² heat flux. Grounded in peer-reviewed literature on working fluid behavior and condenser design.</p>
             </div>
+            <ul class="full-description" hidden>
+              <li>Design and validate microchannel geometry for a pulsating heat pipe (PHP) intended for high-heat-flux (≥100 W/cm²) power electronics cooling, under the guidance of faculty advisor Dr. Shawn Putnam.</li>
+              <li>Research and synthesize peer-reviewed literature and experimental data on flat-plate pulsating heat pipes — covering working fluid behavior, condenser configuration, and channel geometry — to ground design decisions in validated results.</li>
+              <li>Develop SolidWorks CAD models of the microchannel heat exchanger and prepare technical presentations and documentation communicating design rationale, governing equations, and thermal performance data to faculty.</li>
+            </ul>
           </article>
 
           <!-- Project 2 -->
-          <article class="project-card is-clickable" data-gallery='["assets/images/orange-race.jpg","assets/images/orange-race-2.jpg"]' data-caption="Great Navel Orange Race — Autonomous Pond Racing Boat" tabindex="0" role="button" aria-label="View photos for Great Navel Orange Race">
-            <div class="placeholder-frame media-16x10 is-filled">
+          <article class="project-card is-clickable" data-gallery='[{"type":"image","src":"assets/images/orange-race.jpg"},{"type":"image","src":"assets/images/orange-race-2.jpg"}]' data-caption="Great Navel Orange Race — Autonomous Pond Racing Boat" tabindex="0" role="button" aria-label="View details for Great Navel Orange Race">
+            <div class="placeholder-frame media-card is-filled">
               <img src="assets/images/orange-race.jpg" alt="Autonomous pond racing boat with an orange payload, poolside test run" loading="lazy" />
               <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Arduino</span><span class="tag">CAD/CAM</span><span class="tag">3D Printing</span></div>
               <h3>Great Navel Orange Race — Autonomous Pond Racing Boat</h3>
-              <p>Designed and fabricated an autonomous pond racing boat from laser-cut water-resistant wood with custom CAD-designed DXF ribs and hull. Integrated an Arduino Nano control system with a brushless motor and ESC, plus a 3D-printed rudder assembly.</p>
-              <div class="project-links">
-                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Demo video link placeholder</span>
-              </div>
+              <p class="project-blurb">An autonomous pond racing boat built from laser-cut, CAD-designed hull ribs. Runs on an Arduino Nano with a brushless motor, ESC, and a 3D-printed rudder.</p>
             </div>
+            <ul class="full-description" hidden>
+              <li>Designed and fabricated an autonomous pond racing boat using laser-cut water-resistant wood, incorporating custom CAD-designed DXF ribs and hull structures for durability and performance.</li>
+              <li>Integrated an Arduino Nano-based control system with a brushless motor and ESC, testing propulsion and maneuverability under competition conditions.</li>
+              <li>3D-printed a custom rudder assembly and waterproofed the vessel, validating environmental durability using CAD/CAM manufacturing and rapid prototyping techniques.</li>
+            </ul>
           </article>
 
           <!-- Project 3 -->
-          <article class="project-card is-clickable" data-gallery='["assets/images/irrigation-system.jpg"]' data-caption="Arduino-Based Auto-Irrigation System" tabindex="0" role="button" aria-label="View photos for Arduino-Based Auto-Irrigation System">
-            <div class="placeholder-frame media-16x10 is-filled">
+          <article class="project-card is-clickable" data-gallery='[{"type":"image","src":"assets/images/irrigation-system.jpg"}]' data-caption="Arduino-Based Auto-Irrigation System" tabindex="0" role="button" aria-label="View details for Arduino-Based Auto-Irrigation System">
+            <div class="placeholder-frame media-card is-filled">
               <img src="assets/images/irrigation-system.jpg" alt="Custom 3D-printed auto-irrigation planter with reservoir and electronics housing" loading="lazy" />
               <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Arduino</span><span class="tag">Electronics</span><span class="tag">3D Printing</span></div>
               <h3>Arduino-Based Auto-Irrigation System</h3>
-              <p>Built a low-power automated plant-watering system using an Arduino Nano, soil moisture sensor, and relay-controlled pump. Engineered a single-supply 5V power architecture with surge suppression and a custom 3D-printed enclosure housing the reservoir and electronics.</p>
-              <div class="project-links">
-                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Build log link placeholder</span>
-              </div>
+              <p class="project-blurb">A low-power auto-watering system built around an Arduino Nano, moisture sensor, and relay-controlled pump. Housed in a custom 3D-printed enclosure with a stabilized 5V supply.</p>
             </div>
+            <ul class="full-description" hidden>
+              <li>Built a low-power automated plant watering system using an Arduino Nano, soil moisture sensor, and relay-controlled pump.</li>
+              <li>Engineered and tested a single-supply 5V power architecture with surge suppression and power stabilization, validating reliable operation under motor load.</li>
+              <li>Modeled and 3D-printed a custom enclosure integrating a reservoir, electronics housing, and plant pot into a portable, field-tested unit.</li>
+            </ul>
           </article>
 
           <!-- Project 4 -->
-          <article class="project-card is-clickable" data-gallery='["assets/images/waste-sorting-robot.jpg","assets/images/waste-sorting-robot-2.jpg"]' data-caption="ASME Waste-Sorting Robot" tabindex="0" role="button" aria-label="View photos for ASME Waste-Sorting Robot">
-            <div class="placeholder-frame media-16x10 is-filled">
+          <article class="project-card is-clickable" data-gallery='[{"type":"image","src":"assets/images/waste-sorting-robot.jpg"},{"type":"image","src":"assets/images/waste-sorting-robot-2.jpg"}]' data-caption="ASME Waste-Sorting Robot" tabindex="0" role="button" aria-label="View details for ASME Waste-Sorting Robot">
+            <div class="placeholder-frame media-card is-filled">
               <img src="assets/images/waste-sorting-robot.jpg" alt="ASME Student Design Competition waste-sorting robot with articulated claw arm" loading="lazy" />
               <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">SolidWorks</span><span class="tag">Robotics</span><span class="tag">ASME</span></div>
               <h3>ASME Waste-Sorting Robot</h3>
-              <p>Developed a full SolidWorks CAD model for a competition-compliant waste-sorting robot with integrated color sensors, and led integration of motors, controllers, and power systems with the mechanical design as Drive Team Lead.</p>
-              <div class="project-links">
-                <span class="link-placeholder"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 6.5 12.4 5A4 4 0 1 1 18 10.6L16.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13 17.5 11.6 19A4 4 0 1 1 6 13.4L7.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Competition recap link placeholder</span>
-              </div>
+              <p class="project-blurb">A competition-ready waste-sorting robot modeled fully in SolidWorks, with integrated color sensors. Built as Drive Team Lead, wiring motors, controllers, and power systems into the design.</p>
             </div>
+            <ul class="full-description" hidden>
+              <li>Developed a SolidWorks CAD model for a competition-compliant waste-sorting robot integrating color sensors.</li>
+              <li>Integrated electronics — including motors, controllers, and power systems — with mechanical design, validating performance through cross-disciplinary team testing.</li>
+              <li>Gained hands-on experience in cross-disciplinary teamwork, project management, and competition.</li>
+            </ul>
           </article>
 
           <!-- Project 5 -->
-          <article class="project-card">
-            <div class="placeholder-frame media-16x10 is-filled">
-              <video src="assets/videos/catapult.mp4" controls preload="metadata" playsinline></video>
+          <article class="project-card is-clickable" data-gallery='[{"type":"video","src":"assets/videos/catapult.mp4"}]' data-caption="Catapult Project" tabindex="0" role="button" aria-label="View details for Catapult Project">
+            <div class="placeholder-frame media-card is-filled">
+              <video src="assets/videos/catapult.mp4" preload="metadata" muted playsinline class="card-video-preview"></video>
+              <span class="media-expand-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </div>
             <div class="project-body">
               <div class="project-tags"><span class="tag">Team Project</span><span class="tag">Servo Control</span><span class="tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/><path d="m9 12.5-1.5 6L12 16l4.5 2.5-1.5-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> 1st Place</span></div>
               <h3>Catapult Project</h3>
-              <p>Collaborated with a 4-member team to design and test a latch-triggered elastic catapult robot with servo and Arduino electromechanical integration, iteratively tuning for launch accuracy and consistency — earning 1st place.</p>
+              <p class="project-blurb">A latch-triggered elastic catapult robot built with a 4-person team for a school competition. Servo and Arduino integration tuned for launch accuracy — earning 1st place.</p>
             </div>
+            <ul class="full-description" hidden>
+              <li>Collaborated with a 4-member team to design and test a latch-triggered elastic catapult robot for a school-sanctioned competition.</li>
+              <li>Implemented servo and Arduino electromechanical integration, iteratively testing to optimize launch accuracy and consistency — earned 1st place.</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -329,20 +342,28 @@
   </footer>
 
   <div class="lightbox" id="lightbox" hidden>
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
-    </button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <figure class="lightbox-figure">
-      <img id="lightboxImg" src="" alt="" />
-      <figcaption id="lightboxCaption"></figcaption>
-    </figure>
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="lightbox-counter" id="lightboxCounter"></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="lightbox-media">
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lightbox-media-inner" id="lightboxMediaInner"></div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+
+      <div class="lightbox-info">
+        <div class="project-tags" id="lightboxTags"></div>
+        <h3 id="lightboxCaption"></h3>
+        <ul class="fact-list" id="lightboxDetail"></ul>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
