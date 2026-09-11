@@ -288,6 +288,13 @@ img, video { max-width: 100%; display: block; }
 }
 .lightbox-info h3 { font-size: 1.2rem; margin: 0; }
 .lightbox-info .fact-list li { font-size: .92rem; }
+.lightbox-link {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  margin-top: 4px; padding: 10px 16px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .88rem;
+  transition: background .15s, transform .15s;
+}
+.lightbox-link:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
 .lightbox-close, .lightbox-nav {
   display: flex; align-items: center; justify-content: center;

@@ -58,6 +58,8 @@ const lightboxCounter = document.getElementById("lightboxCounter");
 const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 const lightboxClose = document.getElementById("lightboxClose");
+const lightboxLink = document.getElementById("lightboxLink");
+const lightboxLinkLabel = document.getElementById("lightboxLinkLabel");
 
 let galleryItems = [];
 let galleryIndex = 0;
@@ -106,6 +108,15 @@ function openLightbox(card, triggerEl) {
 
   const detailSource = card.querySelector(".full-description");
   lightboxDetail.innerHTML = detailSource ? detailSource.innerHTML : "";
+
+  const linkSource = card.querySelector(".full-link");
+  if (linkSource) {
+    lightboxLink.href = linkSource.href;
+    lightboxLinkLabel.textContent = linkSource.textContent;
+    lightboxLink.hidden = false;
+  } else {
+    lightboxLink.hidden = true;
+  }
 
   lastFocusedEl = triggerEl || document.activeElement;
   renderLightboxMedia();
