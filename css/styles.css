@@ -294,6 +294,7 @@ img, video { max-width: 100%; display: block; }
   background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .88rem;
   transition: background .15s, transform .15s;
 }
+.lightbox-link[hidden] { display: none; }
 .lightbox-link:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
 .lightbox-close, .lightbox-nav {
